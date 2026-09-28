@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício Grunt</title>
+    <meta
+      name="description"
+      content="Projeto profissional de automação com Grunt, LESS e JavaScript minificado."
+    />
+    <link rel="stylesheet" href="dist/css/estilo.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="badge">EBAC • Front-end</div>
+          <h1>Automação com Grunt</h1>
+          <p class="subtitle">
+            Projeto profissional para compilar LESS e minificar JavaScript utilizando
+            tarefas automatizadas com Grunt.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#recursos">Ver recursos</a>
+          </div>
+        </div>
+
+        <div class="card" aria-label="Painel de apresentação">
+          <h2>Task runner</h2>
+          <p>
+            O Grunt automatiza a geração de arquivos prontos para produção,
+            reduzindo erros e acelerando o workflow do projeto.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container features" id="recursos">
+      <h2 class="section-title">Recursos do projeto</h2>
+
+      <section class="card-grid">
+        <article class="card">
+          <h2>LESS</h2>
+          <p>
+            O arquivo LESS centraliza estilos reutilizáveis e facilita a manutenção
+            do visual do projeto.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>JavaScript</h2>
+          <p>
+            O script principal recebe interação simples e demonstra o uso de eventos
+            com DOM em um ambiente automatizado.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Build</h2>
+          <p>
+            A tarefa padrão do Grunt executa a compilação e a compressão em um único
+            comando, melhorando a produtividade.
+          </p>
+        </article>
+      </section>
+
+      <section class="card" style="margin-top: 32px; max-width: 520px;">
+        <h2>Teste rápido</h2>
+        <label for="nome-usuario" style="display:block; margin-bottom:10px;">Digite seu nome:</label>
+        <input
+          id="nome-usuario"
+          type="text"
+          placeholder="Seu nome"
+          style="width:100%; padding:10px 12px; border-radius:8px; border:1px solid #dfeaf5; margin-bottom:14px;"
+        />
+        <button data-action="saudacao" type="button" class="btn" style="border:none; cursor:pointer;">
+          Executar ação
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Exercicio Grunt • Desenvolvimento Web • Automação Front-end
+    </footer>
+
+    <script src="dist/js/script.min.js"></script>
+  </body>
+</html>
