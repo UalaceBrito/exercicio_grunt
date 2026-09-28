@@ -1,6 +1,11 @@
 module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    clean: {
+      dist: ['dist/**/*']
+    },
+
     less: {
       development: {
         files: {
@@ -8,6 +13,7 @@ module.exports = function (grunt) {
         }
       }
     },
+
     uglify: {
       options: {
         compress: true,
@@ -21,10 +27,26 @@ module.exports = function (grunt) {
           'dist/js/script.min.js': ['src/js/script.js']
         }
       }
+    },
+
+    watch: {
+      scripts: {
+        files: ['src/js/*.js'],
+        tasks: ['uglify']
+      },
+      styles: {
+        files: ['src/less/*.less'],
+        tasks: ['less']
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['less', 'uglify']);
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.registerTask('build', ['clean', 'less', 'uglify']);
+  grunt.registerTask('dev', ['build', 'watch']);
+  grunt.registerTask('default', ['build']);
 };

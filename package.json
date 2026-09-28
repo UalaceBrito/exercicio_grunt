@@ -1,18 +1,23 @@
 {
   "name": "exercicio-grunt",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto profissional com automação Grunt para LESS e JavaScript",
   "license": "ISC",
-  "author": "",
+  "author": "EBAC Student",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "build": "grunt build",
+    "dev": "grunt dev",
     "grunt": "grunt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "grunt watch",
+    "test": "echo \"No automated tests configured\""
   },
   "devDependencies": {
     "grunt": "^1.6.3",
+    "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-less": "^3.0.0",
-    "grunt-contrib-uglify": "^5.2.2"
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0"
   }
 }
