@@ -5,19 +5,31 @@
   "license": "ISC",
   "author": "EBAC Student",
   "type": "commonjs",
-  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "grunt build",
     "dev": "grunt dev",
-    "grunt": "grunt",
+    "serve": "grunt serve",
     "watch": "grunt watch",
-    "test": "echo \"No automated tests configured\""
+    "lint": "grunt eslint",
+    "clean": "grunt clean",
+    "grunt": "grunt"
   },
   "devDependencies": {
+    "eslint": "^8.57.1",
     "grunt": "^1.6.3",
     "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-connect": "^5.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-less": "^3.0.0",
     "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^24.3.0",
+    "load-grunt-tasks": "^5.1.0"
   }
 }
